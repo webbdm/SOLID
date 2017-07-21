@@ -1,0 +1,8 @@
+/Users/geoffwebb/workspace/C#/exercises/SOLID/bin/Debug/netcoreapp1.1/SOLID.deps.json
+/Users/geoffwebb/workspace/C#/exercises/SOLID/bin/Debug/netcoreapp1.1/SOLID.runtimeconfig.json
+/Users/geoffwebb/workspace/C#/exercises/SOLID/bin/Debug/netcoreapp1.1/SOLID.runtimeconfig.dev.json
+/Users/geoffwebb/workspace/C#/exercises/SOLID/obj/Debug/netcoreapp1.1/SOLID.AssemblyInfo.cs
+/Users/geoffwebb/workspace/C#/exercises/SOLID/bin/Debug/netcoreapp1.1/SOLID.dll
+/Users/geoffwebb/workspace/C#/exercises/SOLID/bin/Debug/netcoreapp1.1/SOLID.pdb
+/Users/geoffwebb/workspace/C#/exercises/SOLID/obj/Debug/netcoreapp1.1/SOLID.dll
+/Users/geoffwebb/workspace/C#/exercises/SOLID/obj/Debug/netcoreapp1.1/SOLID.pdb
