@@ -2,26 +2,68 @@
 using System.Linq;
 using System.Collections.Generic;
 
-
-public class Program
+namespace SOLID
 {
+    public class Program
+    {
 
-    public static void Main() {
+        public static void Main()
+        {
 
-        Console.WriteLine("Vehicles Exercise");
-        // Build a collection of all vehicles that fly
+            Console.WriteLine("Vehicles Exercise");
 
-        // With a single `foreach`, have each vehicle Fly()
+            var airVehicles = new List<IAirVehicle>{
+                    new Cessna(), new Helicopter()
+            };
 
-        // Build a collection of all vehicles that operate on roads
+            foreach (var vehicle in airVehicles)
+            {
+                vehicle.Fly();
+                vehicle.Land();
+                Console.WriteLine();
+            }
 
-        // With a single `foreach`, have each road vehicle Drive()
+            var roadVehicles = new List<IDriveableVehicle>{
+                new Delorean(),
+                new Motorcycle()
+            };
+
+            foreach (var vehicle in roadVehicles)
+            {
+                vehicle.Drive();
+                vehicle.Stop();
+                Console.WriteLine();
+            }
+
+            var waterVehicles = new List<IWaterVehicle>{
+                new JetSki(), new RowBoat()
+            };
+
+            foreach (var vehicle in waterVehicles)
+            {
+                vehicle.Start();
+
+                var driveableVehicle = vehicle as IDriveableVehicle;
+                if (driveableVehicle != null)
+                {
+                    driveableVehicle.Drive();
+                    driveableVehicle.Stop();
+                }
+            }
+            // Build a collection of all vehicles that fly
+
+            // With a single `foreach`, have each vehicle Fly()
+
+            // Build a collection of all vehicles that operate on roads
+
+            // With a single `foreach`, have each road vehicle Drive()
 
 
 
-        // Build a collection of all vehicles that operate on water
-        
-        // With a single `foreach`, have each water vehicle Drive()
+            // Build a collection of all vehicles that operate on water
+
+            // With a single `foreach`, have each water vehicle Drive()
+        }
+
     }
-
 }

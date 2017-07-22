@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace SOLID
 {
-    public class Cessna : IVehicle
+    public class Cessna : IAirVehicle
     {
         public int Wheels { get; set; } = 3;
         public int Doors { get; set; } = 3;
@@ -12,14 +12,7 @@ namespace SOLID
         public bool Winged { get; set; } = true;
         public string TransmissionType { get; set; } = "None";
         public double EngineVolume { get; set; } = 31.1;
-        public double MaxWaterSpeed { get; set; }
-        public double MaxLandSpeed { get; set; }
-        public double MaxAirSpeed { get; set; } = 309.0;
-
-        public void Drive()
-        {
-            throw new NotImplementedException();
-        }
+        public double MaxSpeed { get; set; } = 309.0;
 
         public void Fly()
         {
@@ -28,12 +21,13 @@ namespace SOLID
 
         public void Start()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Taking off");
         }
 
-        public void Stop()
+        public void Land()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Landing");
+
         }
     }
 }

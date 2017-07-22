@@ -4,36 +4,29 @@ using System.Collections.Generic;
 
 namespace SOLID
 {
-    public class JetSki : IVehicle
+    public class JetSki : IWaterVehicle, IDriveableVehicle
     {
-        public int Wheels { get; set; }
-        public int Doors { get; set; }
-        public int PassengerCapacity { get; set; }
-        public bool Winged { get; set; }
-        public string TransmissionType { get; set; }
-        public double EngineVolume { get; set; }
-        public double MaxWaterSpeed { get; set; }
-        public double MaxLandSpeed { get; set; }
-        public double MaxAirSpeed { get; set; }
+
+        public int PassengerCapacity { get; set; } = 1;
+        public string TransmissionType { get; set; } = "Turbo";
+        public double EngineVolume { get; set; } = 3.1;
+        public double MaxSpeed { get; set; } = 70;
+        public int Wheels { get; set; } = 0;
+        public int Doors { get; set; } = 0;
 
         public void Drive()
         {
             Console.WriteLine("The jetski zips through the waves with the greatest of ease");
         }
 
-        public void Fly()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Start()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Hey y'all watch this");
         }
 
         public void Stop()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Stoppin the jet ski");
         }
     }
 }
